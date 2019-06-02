@@ -133,7 +133,7 @@ Något som man kan sakna är mer specifika övningsuppgifter där vi själva få
 
 ## Frontend
 
-### Setup
+## Setup
 
 ```
 $ cd frontend
@@ -143,7 +143,7 @@ $ npm start | $ npm test | $ npm run build | $ npm run eject
 
 ## Backend
 
-### Setup
+## Setup
 
 ```
 $ cd backend
@@ -151,7 +151,7 @@ $ npm install
 $ npm start | $ npm run dev
 ```
 
-### Usage
+## Usage
 
 ### Swagger
 
