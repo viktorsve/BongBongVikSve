@@ -1,0 +1,243 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "BongBong",
+    "description": "BongBong Application API",
+    "license": {
+      "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    }
+  },
+  "host": "localhost:3000",
+  "tags": [{
+    "name": "Students",
+    "description": "API for students in the system"
+  }],
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/students": {
+      "get": {
+        "tags": [
+          "Students"
+        ],
+        "summary": "Get all students in system",
+        "parameters": [{
+          "name": "email",
+          "in": "query",
+          "type": "string",
+          "format": "email"
+        }, {
+          "name": "name",
+          "in": "query",
+          "type": "string",
+          "format": "name"
+        }, {
+          "name": "address.gata",
+          "in": "query",
+          "type": "string",
+          "format": "gata"
+        }, {
+          "name": "address.postnummer",
+          "in": "query",
+          "type": "string",
+          "format": "postnummer"
+        }, {
+          "name": "address.ort",
+          "in": "query",
+          "type": "string",
+          "format": "ort"
+        }],
+        "responses": {
+          "200": {
+            "description": "Array of students",
+                "schema": {
+                  "$ref": "#/definitions/Students"
+                }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Students"
+        ],
+        "summary": "Create new student in system",
+        "parameters": [{
+          "name": "student",
+          "in": "body",
+          "description": "Student that we want to create",
+          "schema": {
+            "$ref": "#/definitions/Student"
+          }
+        }],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "New student is created",
+            "schema": {
+              "$ref": "#/definitions/Student"
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        }
+      }
+    },
+    "/students/{studentId}": {
+      "parameters": [{
+        "name": "studentId",
+        "in": "path",
+        "required": true,
+        "description": "ID of student that we want to find",
+        "type": "string"
+      }],
+      "get": {
+        "tags": [
+          "Students"
+        ],
+        "summary": "Get student with given ID",
+        "responses": {
+          "200": {
+            "description": "Student is found",
+            "schema": {
+              "$ref": "#/definitions/Student"
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        }
+      },
+      "put": {
+        "summary": "Update student with give ID",
+        "tags": [
+          "Students"
+        ],
+        "parameters": [{
+          "name": "user",
+          "in": "body",
+          "description": "Student with new values of properties",
+          "schema": {
+            "$ref": "#/definitions/Student"
+          }
+        }],
+        "responses": {
+          "200": {
+            "description": "Student was updated"
+          },
+          "201": {
+            "description": "New student created"
+          },
+          "204": {
+            "description": "No student was created or updated"
+          },
+          "404": {
+            "description": "Student not found with that id",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete student with given ID",
+        "tags": [
+          "Students"
+        ],
+        "responses": {
+          "200": {
+            "description": "Student is deleted"
+          },
+          "404": {
+            "description": "Student not found with that id",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          },
+          "204": {
+            "description": "Nothing was removed"
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Students": {
+      "type": "array",
+      "items": {
+      "$ref": "#/definitions/Student"
+      }
+    },
+    "Student": {
+      "properties": {
+        "email": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "address": {
+          "properties": {
+            "gata": {
+              "type": "string"
+            },
+            "postnummer": {
+              "type": "string"
+            },
+            "ort": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "Error": {
+      "properties": {
+        "message": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
