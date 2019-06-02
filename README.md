@@ -127,7 +127,7 @@ Jag tycker att kursens takt är bra. Det har varit enkelt att hänga med och det
 Min uppfattning angående kurslitteraturen är att den känns genomarbetad och är relativt lätt att förstå vilket känns bra.
 
 **Format**  
-Något som man kan sakna är mer specifika övningsuppgifter där vi själva får testa att implementera det som vi har lärt oss. T.ex. om vi går igenom put/patch så hade det underlättat om man fick lite övningsuppgifter där man får testa dessa metoder och hitta olika lösningar. Lite mer struktur angående vad vi ska gå igenom varje lektion/vecka hade också varit att föredra.
+Något som man kan sakna är mer specifika övningsuppgifter där vi själva får testa att implementera det som vi har lärt oss, t.ex. om vi går igenom put/patch så hade det underlättat om man fick lite övningsuppgifter där man får testa dessa metoder och hitta olika lösningar. Lite mer struktur angående vad vi ska gå igenom varje lektion/vecka hade också varit att föredra.
 
 ## Praktisk del
 
