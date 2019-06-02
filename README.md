@@ -120,13 +120,13 @@ curl -X GET "http://localhost:3000/students/5cece7fc6813090b94ff5cb9" -H "accept
 
 ## Feedback
 
-**Kursens takt**  
+### **Kursens takt**
 Jag tycker att kursens takt är bra. Det har varit enkelt att hänga med och det som vi har fokuserat på känns relevant.
 
-**Kursmaterial**  
+### **Kursmaterial**
 Min uppfattning angående kurslitteraturen är att den känns genomarbetad och är relativt lätt att förstå vilket känns bra.
 
-**Format**  
+### **Format**
 Något som man kan sakna är mer specifika övningsuppgifter där vi själva får testa att implementera det som vi har lärt oss, t.ex. om vi går igenom put/patch så hade det underlättat om man fick lite övningsuppgifter där man får testa dessa metoder och hitta olika lösningar. Lite mer struktur angående vad vi ska gå igenom varje lektion/vecka hade också varit att föredra.
 
 ## Praktisk del
