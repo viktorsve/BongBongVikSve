@@ -131,9 +131,9 @@ Något som man kan sakna är mer specifika övningsuppgifter där vi själva få
 
 ## Praktisk del
 
-## Frontend
+### Frontend
 
-## Setup
+### Setup
 
 ```
 $ cd frontend
@@ -141,9 +141,9 @@ $ npm install
 $ npm start | $ npm test | $ npm run build | $ npm run eject
 ```
 
-## Backend
+### Backend
 
-## Setup
+### Setup
 
 ```
 $ cd backend
@@ -151,9 +151,9 @@ $ npm install
 $ npm start | $ npm run dev
 ```
 
-## Usage
+### Usage
 
-### Swagger
+#### Swagger
 
   http://localhost:3000/BongBong
 
