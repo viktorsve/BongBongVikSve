@@ -131,9 +131,9 @@ Något som man kan sakna är mer specifika övningsuppgifter där vi själva få
 
 ## Praktisk del
 
-### Frontend
+## Frontend
 
-#### Setup
+### Setup
 
 ```
 $ cd frontend
@@ -141,9 +141,9 @@ $ npm install
 $ npm start | $ npm test | $ npm run build | $ npm run eject
 ```
 
-### Backend
+## Backend
 
-#### Setup
+### Setup
 
 ```
 $ cd backend
@@ -151,21 +151,21 @@ $ npm install
 $ npm start | $ npm run dev
 ```
 
-#### Usage
+### Usage
 
-#### Swagger
+### Swagger
 
   http://localhost:3000/BongBong
 
-#### URL
+### URL
 
 	http://localhost:3000/students
 
-#### Methods
+### Methods
 
   `GET` | `POST` | `DELETE` | `PUT`
 
-#### URL Params
+### URL Params
 
    /students/{studentId}
 
@@ -173,7 +173,7 @@ $ npm start | $ npm run dev
 
   `email=[string]` | `name=[string]` | `address.gata=[string]` | `address.postnummer=[string]` | `address.ort=[string]`
 
-#### Data Params
+### Data Params
 
  ```
   Students:
@@ -188,7 +188,7 @@ $ npm start | $ npm run dev
   }
  ```
 
-#### Success Response
+### Success Response
 
   GET /students
   * **Code:** 200 OK
@@ -279,7 +279,7 @@ $ npm start | $ npm run dev
       }
   ```
 
-#### Error Response
+### Error Response
 
   GET /students
   * **Code:** 500 Internal Server Error
@@ -341,7 +341,7 @@ $ npm start | $ npm run dev
       message: err.message
     }
     ```
-#### Sample Call
+### Sample Call
 
 ```
 curl -X GET "http://localhost:3000/students" -H "accept: application/json" | jq
